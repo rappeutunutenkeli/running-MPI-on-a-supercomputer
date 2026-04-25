@@ -26,3 +26,21 @@ sbatch startMPI.pbs
   <tr><td>200</td><td>0,05</td><td>4</td></tr>
   <tr><td>200</td><td>0,01</td><td>8</td></tr>
 </table>
+
+### График к полученным данным
+```mermaid
+---
+title: "График производительности"
+config:
+  themeVariables:
+    xyChart:
+      primaryColor: "#1f77b4"
+      primaryBorderColor: "#ff7f0e"
+      lineColor: "#2ca02c"
+---
+xychart-beta
+    title "График производительности"
+    x-axis "Количество ядер (N)" [1, 2, 4, 8]
+    y-axis "Время (секунды)" 0 --> 1.0
+    line "4×32" [0.11, 0.08, 0.05, 0.1004, 0.01]
+```
