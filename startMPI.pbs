@@ -1,0 +1,8 @@
+#!/bin/bash
+#SBATCH --job-name=matrix_mult
+#SBATCH --time=0:05:00
+#SBATCH --ntasks-per-node=2
+#SBATCH --partition batch
+
+module load intel/mpi4
+mpirun -r ssh ./matrix_mult 200
